@@ -1,7 +1,7 @@
 
 class OpenWeatherProvider {
     constructor() {
-        this.appId = "74b2a4f16303e6d31a1f6d177078f326";
+        this.appId = "";
     }
 
     getLocation({ latitude, longitude }) {
