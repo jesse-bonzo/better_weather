@@ -17,5 +17,9 @@ Put your Open Weather Map API as the value for the key `REACT_APP_OPEN_WEATHER_A
 
 The packaged app will be in `build`. That can be installed using the [KaiOS developer tools](https://developer.kaiostech.com/docs/sfp-3.0/getting-started/env-setup/os-env-setup).
 
+## Running
+
+`npm run start`
+
 ## Credits
 * Logo - https://openclipart.org/detail/18892/-by--18892
