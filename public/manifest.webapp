@@ -1,15 +1,25 @@
 {
- "name": "Better Weather",
- "description": "Better Weather for KaiOS",
- "version": "0.1.0",
- "fullscreen": "true",
- "launch_path": "index.html",
- "icons": {
-     "128": "/logo_128.png",
-     "512": "/logo_512.png"
- },
- "permissions": {
-     "geolocation": {
-         "description": "Required for displaying weather information for the user's current location"
- }
+    "name": "Better Weather",
+    "categories": ["utilities"],
+    "description": "Better Weather for KaiOS",
+    "lang": "en-US",
+    "id": "better_weather",
+    "version": "0.1.0",
+    "fullscreen": "false",
+    "launch_path": "/index.html",
+    "type": "web",
+    "default_locale": "en-US",    
+    "icons": {
+        "16": "/logo_16.png",
+        "32": "/logo_32.png", 
+        "128": "/logo_128.png",
+        "512": "/logo_512.png"
+    },
+        "developer": {
+        "name": "Jesse Bonzo",
+        "url": "https://github.com/jesse-bonzo/better_weather"
+    },
+    "permissions": {
+        "geolocation": {}
+    }
 }

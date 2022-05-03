@@ -7,6 +7,7 @@ function App() {
   const [position, setPosition] = useState();
   const [location, setLocation] = useState();
   const [forecast, setForecast] = useState();
+  const [error, setError] = useState();
 
   if (!position && navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
@@ -14,7 +15,10 @@ function App() {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude
       })
-    }, error => console.error(error));
+    }, error => {
+      setError("Unable to retrieve your location");
+      console.error(error)
+    });
   }
 
   if (position) {
@@ -23,17 +27,29 @@ function App() {
     }
 
     if (!forecast) {
-      OpenWeatherProvider.getForecast(position).then(result => result.json().then(json => setForecast(json))).catch(err => console.error(err));
+      OpenWeatherProvider.getForecast(position).then(result => result.json().then(json => setForecast(json)))
+      .catch(err => { 
+        setError("Unable to retrieve forecast");
+        console.error(err)
+      });
     }
   }
 
-  return (
-    <div className="App">
-      {location && location.name && location.state && <div className="weather-location">{location.name}, {location.state}</div>}
-      {location && location.name && !location.state && <div className="weather-location">{location.name}</div>}
-      {forecast && <ForecastView forecast={forecast}></ForecastView>}
-    </div>
-  );
+  if (error) {
+    return (
+      <div className="App">
+        <div className='error'>{error}</div>
+      </div>
+    );
+  } else {
+    return (
+      <div className="App">
+        {location && location.name && location.state && <div className="weather-location">{location.name}, {location.state}</div>}
+        {location && location.name && !location.state && <div className="weather-location">{location.name}</div>}
+        {forecast && <ForecastView forecast={forecast}></ForecastView>}
+      </div>
+    );
+  }
 }
 
 export default App;

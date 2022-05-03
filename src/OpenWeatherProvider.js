@@ -1,7 +1,7 @@
 
 class OpenWeatherProvider {
     constructor() {
-        this.appId = "";
+        this.appId = process.env.REACT_APP_OPEN_WEATHER_API_KEY;
     }
 
     getLocation({ latitude, longitude }) {
