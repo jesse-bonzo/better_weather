@@ -1,0 +1,15 @@
+{
+ "name": "Better Weather",
+ "description": "Better Weather for KaiOS",
+ "version": "0.1.0",
+ "fullscreen": "true",
+ "launch_path": "index.html",
+ "icons": {
+     "128": "/logo_128.png",
+     "512": "/logo_512.png"
+ },
+ "permissions": {
+     "geolocation": {
+         "description": "Required for displaying weather information for the user's current location"
+ }
+}

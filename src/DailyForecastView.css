@@ -1,0 +1,12 @@
+.label {
+    font-weight: bold;
+}
+
+.day-name {
+    font-weight: bold;
+}
+
+.day-forecast {
+    width: 100vw;
+    height: 100vh;
+}
