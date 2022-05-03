@@ -3,13 +3,11 @@
     "categories": ["utilities"],
     "description": "Better Weather for KaiOS",
     "subtitle": "Better Weather for KaiOS",
-    "lang": "en-US",
     "id": "better_weather",
     "version": "0.1.0",
     "fullscreen": "false",
     "launch_path": "/index.html",
     "type": "web",
-    "default_locale": "en-US",    
     "icons": {
         "16": "/logo_16.png",
         "32": "/logo_32.png", 
@@ -32,7 +30,7 @@
     "default_locale": "en-US",
     "locales": {
         "en-US": {
-            "name": "en-US",
+            "name": "Better Weather",
             "subtitle": "Better Weather for KaiOS",
             "description": "A simple weather app that provides accurate information."
         }
