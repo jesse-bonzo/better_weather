@@ -2,6 +2,7 @@
     "name": "Better Weather",
     "categories": ["utilities"],
     "description": "Better Weather for KaiOS",
+    "subtitle": "Better Weather for KaiOS",
     "lang": "en-US",
     "id": "better_weather",
     "version": "0.1.0",
@@ -12,14 +13,28 @@
     "icons": {
         "16": "/logo_16.png",
         "32": "/logo_32.png", 
+        "56": "/logo_56.png",
+        "112": "/logo_112.png",
         "128": "/logo_128.png",
         "512": "/logo_512.png"
     },
-        "developer": {
+    "developer": {
         "name": "Jesse Bonzo",
         "url": "https://github.com/jesse-bonzo/better_weather"
     },
     "permissions": {
-        "geolocation": {}
+        "geolocation": {
+            "description": "Geolocation is used to provide weather for the user's current location."
+        },
+        "mobiledata":{},
+        "wifidata":{}
+    },
+    "default_locale": "en-US",
+    "locales": {
+        "en-US": {
+            "name": "en-US",
+            "subtitle": "Better Weather for KaiOS",
+            "description": "A simple weather app that provides accurate information."
+        }
     }
 }
